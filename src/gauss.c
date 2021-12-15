@@ -11,4 +11,4 @@ int eliminate(Matrix *mat, Matrix *b){
                 printf("lalala");
 		return 0;
 }
-
+//test
