@@ -8,7 +8,7 @@ int eliminate(Matrix *mat, Matrix *b){
     /**
   	 * Tutaj należy umieścić właściwą implemntację.
 		 */
-
+                printf("lalala");
 		return 0;
 }
 
