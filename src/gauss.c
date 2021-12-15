@@ -10,5 +10,12 @@ int eliminate(Matrix *mat, Matrix *b){
 		 */
                 printf("lalala");
 		return 0;
+		sjdkhfkjsdhfjk
+			sdfsd
+			f
+			sd
+			fsd
+			f
+			dsf
 }
-//test
+
