@@ -1,4 +1,5 @@
 #include "backsubst.h"
+#include "mat_io.h"
 /**
  * Zwraca 0 - wsteczne podstawienie zakonczone sukcesem
  * Zwraca 1 - błąd dzielenia przez 0 (element na diagonali = 0)
@@ -14,7 +15,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 			sum += mat->dane[i][j]*x->dane[j][0];
 	       if(mat->dane[i][i] == 0)
 		       return 1;
-	       x->dane[i][0] = (b->dane[i][0]-sum)/m->dane[i][i];
+	       x->dane[i][0] = (b->dane[i][0]-sum)/mat->dane[i][i];
 	
 				//to ponizej jest przepisaniem b do x. Nalezy to poprawic! /
 
