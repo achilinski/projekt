@@ -12,11 +12,11 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	for(i = mat->r; i >= 0; i--) {
 	       double sum = 0.0;
 	       for(j = i+1; j< mat->r; j++)
-			sum += mat->dane[i][j]*x->dane[j][0];
-	       if(mat->dane[i][i] == 0)
+			sum += mat->data[i][j]*x->data[j][0];
+	       if(mat->data[i][i] == 0)
 		       return 1;
-	       x->dane[i][0] = (b->dane[i][0]-sum)/mat->dane[i][i];
-	
+	       x->data[i][0] = (b->data[i][0]-sum)/mat->data[i][i];
+	}	
 				//to ponizej jest przepisaniem b do x. Nalezy to poprawic! /
 
 //				int i;
