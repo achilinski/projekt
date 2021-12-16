@@ -9,7 +9,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	int i, j;
 	if(x->c != 1 || b->c != 1 || mat->r != mat->c || mat->r != x->r || mat->r != b->r)
 		return 2;
-	for(i = mat->r; i >= 0; i--) {
+	for(i = mat->r-1; i >= 0; i--) {
 	       double sum = 0.0;
 	       for(j = i+1; j< mat->r; j++)
 			sum += mat->data[i][j]*x->data[j][0];
