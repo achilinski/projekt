@@ -7,17 +7,19 @@
 
 int main(int argc, char ** argv) {
 	int res;
-	printf("read");
+	printf("\nread\n");
 	Matrix * A = readFromFile(argv[1]);
 	Matrix * b = readFromFile(argv[2]);
 	Matrix * x;
 	if (A == NULL) return -1;
 	if (b == NULL) return -2;
-	printf("print");
+	printf("\nprint\n");
 	printToScreen(A);
+	printf("\nwypisalem A\n");
 	printToScreen(b);
-	
-	printf("zaczynam eliminacje");
+	printf("\nwypisalem b\n");
+
+	printf("\nzaczynam eliminacje\n");
 	res = eliminate(A,b);
 	printf("wykonano eliminate");
 	x = createMatrix(b->r, 1);
