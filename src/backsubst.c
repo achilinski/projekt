@@ -5,7 +5,7 @@
  * Zwraca 2 - błąd nieprawidłowych rozmiarów macierzy
  */
 int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
-	
+	int i, j;
 	if(x->c != 1 || b->c != 1 || mat->r != mat->c || mat->r != x->r || mat->r != b->r)
 		return 2;
 	for(i = mat->r; i >= 0; i--) {
